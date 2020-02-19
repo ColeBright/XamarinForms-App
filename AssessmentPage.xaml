@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="C971ColeBright.AssessmentPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Activated="ToolbarItem_Activated"/>
+        <ToolbarItem Text="EDIT" Activated="ToolbarItem_Activated_1"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="10,10,10,0">
+        <Entry Text="cname" x:Name="cname" IsEnabled="False"/>
+        <Label Text="Course Start" />
+        <DatePicker x:Name="cstart" IsEnabled="False"/>
+        <Label Text="Course End"/>
+        <DatePicker x:Name="cend" IsEnabled="False"/>
+        <Label Text="Course Status"/>
+        <Picker x:Name="cstatus" IsEnabled="False">
+            <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>In Progress</x:String>
+                <x:String>Planned To Take</x:String>
+                <x:String>Completed</x:String>
+                <x:String>Dropped</x:String>
+            </x:Array>
+            </Picker.ItemsSource>
+            </Picker>
+        <Entry Text="cinstname" x:Name="cinstname" IsEnabled="False"/>
+        <Entry Text="cinstphone" x:Name="cinstphone" IsEnabled="False"/>
+        <Entry Text="cinstemail" x:Name="cinstemail" IsEnabled="False"/>
+        <Entry Text="notes" x:Name="cnotes" IsEnabled="False"/>
+        <Button Text="Submit" x:Name="editbtn" IsVisible="False" Clicked="editbtn_Clicked"/>
+        <ListView x:Name="assessmentListView">
+            <ListView.ItemTemplate>
+            <DataTemplate>
+                    <ViewCell>
+                <Label Text="{Binding name}"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

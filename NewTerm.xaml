@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="C971ColeBright.NewTerm">
+    <StackLayout Margin="10,10,10,0">
+        <Label Text="New Term Form"/>
+        <Entry Placeholder="Term Title"
+               x:Name="termTitle"/>
+        <Label Text="Start: "/>
+        <DatePicker  x:Name="startDate"/>
+        <Label Text="End: "/>
+        <DatePicker x:Name="endDate"/>
+        <Button Text="Save"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

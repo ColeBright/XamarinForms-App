@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="C971ColeBright.CoursePage1">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="+"
+            Activated="ToolbarItem_Activated"/>
+        <ToolbarItem
+            Text="EDIT"
+            Activated="ToolbarItem_Activated_1"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="10,10,10,0" x:Name="stack">
+        <Entry Text="term name" x:Name="tname" IsEnabled="False" />
+        <Label Text="Term Start" />
+        <DatePicker x:Name="tstart" IsEnabled="False" />
+        <Label Text="Term End" />
+        <DatePicker x:Name="tend" IsEnabled="False" />
+        <Button Text="Submit"  x:Name="editbtn" IsVisible="False" Clicked="editbtn_Clicked"/>
+
+        <ListView x:Name="courseListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                    <Label Text="{Binding Name}"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

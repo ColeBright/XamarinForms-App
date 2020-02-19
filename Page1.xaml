@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="C971ColeBright.Page1">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,0">
+            <Entry Placeholder="Assessment name"
+               x:Name="assessmentName"/>
+            <Picker x:Name="assessmentType"
+                Title="Assessment Type"
+                TitleColor="Cyan" 
+                >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Objective
+                        </x:String>
+                        <x:String>Performance</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Due Date: "/>
+            <DatePicker x:Name="duedate"/>
+            <Button Text="Save"
+                Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
